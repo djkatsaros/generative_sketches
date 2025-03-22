@@ -3,6 +3,10 @@
 Nowadays generative is a loaded word, but this has nothing to do with generative AI. That shit 
 be banned from this REPO. 
 
+### TODO
+
+Figure out a better name for this pursuit as opposed to 'generative AI'
+
 ## This is a collection of generative art written in jscript. 
 
 ## To render an image, you open the index.html file with the desired script path designated as 'src'.
