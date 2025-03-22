@@ -32,6 +32,7 @@ Attempt to capture the drama of lightning bolts. Tricks were to use a lot of ran
 changes, segment length and quantity parameters. The jagged effect almost looks like a random walk.
 
 Currently:
+
 <img src="lightning/bolts.png" alt="bolts" title="Light - ning" height="400"/>
 
 ### Ships:
