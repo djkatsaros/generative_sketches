@@ -37,5 +37,6 @@ Early collection, focused on experiments with framerate and geometry shading. Th
 ### Stars
 Some north star inspired images using the same straight line geometric style as for Ships. 
 Example images:
-![Alt text](stars/no_fuzz.png){ width=33%,height:33px }
-<img src="stars/no_fuzz.png" alt="alt text" title="image Title" height="150"/>
+<img src="stars/no_fuzz.png" alt="alt text" title="image Title" height="250"/>
+<img src="stars/fuzz.png" alt="alt text" title="image Title" height="250"/>
+<img src="stars/straw_fuzz.png" alt="alt text" title="image Title" height="250"/>
