@@ -36,7 +36,14 @@ Early collection, focused on experiments with framerate and geometry shading. Th
 
 ### Stars
 Some north star inspired images using the same straight line geometric style as for Ships. 
+
 Example images:
-<img src="stars/no_fuzz.png" alt="alt text" title="image Title" height="250"/>
-<img src="stars/fuzz.png" alt="alt text" title="image Title" height="250"/>
-<img src="stars/straw_fuzz.png" alt="alt text" title="image Title" height="250"/>
+
+Standard north star snapshot:
+<img src="stars/no_fuzz.png" alt="Star" title="north star no fuzz" height="400"/>
+
+Fuzzed star with some noise softening the corner boundaries
+<img src="stars/fuzz.png" alt="Fuzzed star" title="north star fuzzed" height="400"/>
+
+Fuzzed star with bursting effect from lines originating at the center
+<img src="stars/straw_fuzz.png" alt="Star with burst" title="north star with burst" height="400"/>
