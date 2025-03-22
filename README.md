@@ -38,6 +38,10 @@ Currently:
 ### Ships:
 Early collection, focused on experiments with framerate and geometry shading. The somewhat 3D looking polygons look like some sort of spaceship perhaps - hence the name.
 
+*With an attempt at a galaxy band in the background*:
+
+<img src="ships/ships_galaxy.png" alt="ships" title="ships and starsa" height="400"/>
+
 ### Stars
 Some north star inspired images using the same straight line geometric style as for Ships. 
 
