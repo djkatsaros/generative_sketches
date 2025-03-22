@@ -14,6 +14,9 @@ Figure out a better name for this pursuit as opposed to 'generative AI'
 Lots of randomness is utilized, so everytime a script is rendered the resulting image 
 **will be different!!**
 
+Additionally, most of these are dynamic scripts with images that change as time elapses, in some case periodically. Rendering the index files in a browser is really the best way to experience
+the pieces. Much is lost in the static images. 
+
 ## Sources:
 Utilizing the p5$_*$js package:
 https://p5js.org/
@@ -62,3 +65,21 @@ Fuzzed star with some noise softening the corner boundaries
 Fuzzed star with bursting effect from lines originating at the center
 
 <img src="stars/straw_fuzz.png" alt="Star with burst" title="north star with burst" height="400"/>
+
+
+LICENSE COVERING ALL SCRIPTS:
+  
+    Copyright (C) 2025  Dean J Katsaros
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
