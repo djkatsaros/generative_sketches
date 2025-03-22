@@ -31,5 +31,11 @@ If you like anything, send a message!
 Attempt to capture the drama of lightning bolts. Tricks were to use a lot of randomized direction
 changes, segment length and quantity parameters. The jagged effect almost looks like a random walk.
 
+### Ships:
+Early collection, focused on experiments with framerate and geometry shading. The somewhat 3D looking polygons look like some sort of spaceship perhaps - hence the name.
 
+### Stars
+Some north star inspired images using the same straight line geometric style as for Ships. 
+Example images:
+![Alt text](no_fuzz.png)
 
