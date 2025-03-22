@@ -7,7 +7,11 @@ be banned from this REPO.
 
 ## To render an image, you open the index.html file with the desired script path designated as 'src'.
 
-Lots of randomness is utilized, so everytime a script is rendered it 
-## will be different!!
+Lots of randomness is utilized, so everytime a script is rendered it ### will be different!!
+
+
+
+If you like anything, send a message! 
+
 
 
