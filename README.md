@@ -5,7 +5,7 @@ be banned from this REPO.
 
 ### TODO
 
-Figure out a better name for this pursuit as opposed to 'generative AI'
+Figure out a better name for this pursuit as opposed to 'generative art.'
 
 ## This is a collection of generative art written in jscript. 
 
