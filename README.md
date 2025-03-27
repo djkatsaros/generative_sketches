@@ -34,7 +34,21 @@ If you like anything, send a message!
 
 ## Current Collections:
 
-### lighting:
+### trees:
+Been wanting to apply the line art aesthetic common to these sketches to draw trees. The key 
+ended up being using Catmull-Rom splines, a mathematical interpolation curve where one specifies
+4 cartesian points ( in the 2D case ), the middle 2 lying on the curve and the 1st/4th being 
+"control points" that speaking aesthetically determine the degree and nature of the curvature
+of the spline. Here is a nice website where one can play with these splines:
+https://www.desmos.com/calculator/552cpvzfxw
+Additionally, a lot of randomness and some choices of how to scale various parameters were
+used.
+
+An example sketch:
+
+<img serc = "trees/tree_img.png" alt = "trees" title = "xray trees fo reel" height = "400"/>
+
+### lightning:
 Attempt to capture the drama of lightning bolts. Tricks were to use a lot of randomized direction
 changes, segment length and quantity parameters. The jagged effect almost looks like a random walk.
 
