@@ -46,7 +46,7 @@ used.
 
 An example sketch:
 
-<img serc = "trees/tree_img.png" alt = "trees" title = "xray trees fo reel" height = "400"/>
+<img src = "trees/tree_img.png" alt = "trees" title = "xray trees fo reel" height = "400"/>
 
 ### lightning:
 Attempt to capture the drama of lightning bolts. Tricks were to use a lot of randomized direction
