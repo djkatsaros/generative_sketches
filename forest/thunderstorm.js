@@ -21,7 +21,7 @@ function setup() {
   lineWidth = 5;
 }
 
-function dist(p1x, p1y, p2x, p2y) {
+function dist__(p1x, p1y, p2x, p2y) {
 
     var d = ((p1x - p2x)**2 + (p1y - p2y)**2)**(1/2);
     return d
@@ -51,8 +51,7 @@ function draw() {
             var tail = []
             for (var bdx = 0; bdx < bolt_tails.length; bdx++) {
                 tail = [bolt_tails[bdx][0], bolt_tails[bdx][1]];   
-                d = dist(tx, ty + 300, tail[0], tail[1]);  
-                if (d < 100) {
+                if (dist__(tx, ty+250, tail[0], tail[1]) < 50) {
                     tree(tx, ty, 0, 3);
                 } 
             }
@@ -118,7 +117,7 @@ function lightning_bolt(rootx, depth) {
     }
     //}
 
-    return bolts[bolts.length];
+    return bolts[bolts.length-1];
 }
 
 function bolt(endy, noisy, start, stroke_, num_bs, xscaling, yscaling) {
