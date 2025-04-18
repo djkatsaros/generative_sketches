@@ -28,7 +28,7 @@ function dist(p1x, p1y, p2x, p2y) {
 }
 
 function draw() {
-    if ( frameCount % 2 == 1) {
+    if ( frameCount == 1) {
         setup()
         random_x = 55;
         const bolt_tails = [];
@@ -36,7 +36,69 @@ function draw() {
         //var b1 = [];
         //var b2 = [];
         //var b3 = [];
-        bolt_tails.push(lightning_bolt(0.5 * W + random(-random_x, random_x), 0.05 * W ));
+        rootx1 = 0.5 * W + random(-random_x, random_x);
+        depth1 = 0.05 * W;
+        yscale = 33;
+        xscale = 33;
+        strokeWeight(4);
+        stroke(bright);
+        const bolts = [];
+        const last = [rootx1, 0];
+        const next = [rootx1 + random(-50,50), depth1 + random(-10, 10)];
+        bolts.push([last[0], last[1]]); //need to use values to avoid reference updating issues
+        line(last[0], last[1], next[0], next[1] );
+        for (var idx=0; idx < num_bolts; idx++) {
+            last[0] = next[0];
+            last[1] = next[1];
+            next[0] += xscale*random(-1,1);
+            next[1] += yscale*random( 0,1.01) + random(-10 ,0);
+            bolts.push([last[0], last[1]]);
+    //            strokeWeight(6)
+    //            stroke(bright/5);
+    //            line(last[0], last[1], next[0], next[1] );
+        }
+
+        //for (var jdx = 0; jdx < bolts.length; jdx += 1) {
+          //  if (random(0,1) < chance_bolt) {
+            //    bolt(100, bolts[jdx], random(70,310), random(num_bolts - fewer_bolts, num_bolts - fewer_bolts + 3), 30, 80);
+         //   }
+       // }
+
+        let strike1 = [];
+        for (var i=0; i<100; i++) {
+            //if (i < 80) {
+            //    var wt = (-(1/15)*i + 25);
+            //} else {
+            //    var wt = ( -(8/15) * i + 172/3);
+            //}
+
+            // smooth interpolating function  
+            wt = 20 * ( 1 - i/100)**(2.0**(-0.9))
+            strokeWeight(wt);
+            // light intensity is inversely proportional to distance.
+            stroke(bright / (1 + (wt - 4)**(0.91)));
+            for (var ldx = 0; ldx < bolts.length - 1; ldx++) { 
+                line(bolts[ldx][0], bolts[ldx][1], bolts[ldx + 1][0], bolts[ldx + 1][1] );
+
+                if (i == 99 && ldx == num_bolts - 1) {
+                    strike1.push(bolts[ldx][0]);
+                    strike1.push(bolts[ldx][1]);
+                 //   circle(strike[0], strike[1], 59);
+                }
+            }
+        } 
+        bolt_tails.push(strike1);
+        circle(bolt_tails[0][0], bolt_tails[0][1], 25);
+        const branch_bolts = [];
+        for (var jdx = 0; jdx < bolts.length; jdx += 1) {
+            if (random(0,1) < chance_bolt) {
+                branch_bolts.push(
+                    bolt(bolts[bolts.length - 1][1], 100, bolts[jdx], random(70,310), random(num_bolts - fewer_bolts, num_bolts - fewer_bolts + 3), 30, 80)                     
+                );
+            }
+        }
+        
+
         bolt_tails.push(lightning_bolt(1.5 * W + random(-random_x, random_x), 0.05 * W ));
         bolt_tails.push(lightning_bolt(2.5 * W + random(-random_x, random_x), 0.05 * W ));
         
@@ -53,9 +115,15 @@ function draw() {
         small_bolt_tails.push(l_b2);
         small_bolt_tails.push(l_b3);
         */
-
+        //circle(bolt_tails[0][0], bolt_tails[0][1], 125);
+        //circle(bolt_tails[1][0], bolt_tails[1][1], 125);
+        circle(bolt_tails[2][0], bolt_tails[2][1], 125);
+ 
         translate(0, height);
         scale(1, -1);
+        //circle(bolt_tails[0][0], bolt_tails[0][1], 125);
+        //circle(bolt_tails[1][0], bolt_tails[1][1], 125);
+        circle(bolt_tails[2][0], -1*bolt_tails[2][1], 125);
         var tx = 0;
         var ty = 0;
         for (var lol = 0; lol < 13; lol ++) {
@@ -65,6 +133,9 @@ function draw() {
             ty = random(10, 50);
             var tail = [];
             var small_tail = [];
+            var burst = false;
+            translate(0, height);
+            scale(1, -1);
             for (var bdx = 0; bdx < bolt_tails.length; bdx++) {
                 //var small_tail = [small_bolt_tails[bdx][0], small_bolt_tails[bdx][1]];
                 tail = bolt_tails[bdx];   
@@ -75,19 +146,28 @@ function draw() {
                 //ellipse(tail[0][0], tail[0][1], 201, 201);
                 var e1 = ea - tail[0];
                 var e2 = eb - tail[1];
-                //ellipse(bolt_tails[bdx][0], bolt_tails[bdx][1], 151, 151);
-                /*if (dist(ea, eb, bolt_tails[bdx][0], bolt_tails[bdx][1]) < 151) {
+                if (dist(ea, eb, bolt_tails[bdx][0], bolt_tails[bdx][1]) < 151) {
+                    translate(0, height);
+                    scale(1, -1); 
                     tree(tx, ty, 0, 3);
-                } */
+                    translate(0, height);
+                    scale(1, -1);
+                } 
             }
-
+            translate(0, height);
+            scale(1, -1);
+            /*
+            if (burst == true) {
+                translate(0, height);
+                scale(1, -1);
+            }*/
             tree(tx, ty, 0, 0);
         }
 
-    } else {
-        clear()
-        setup()
-      }
+    } //else {
+      //  clear()
+      //  setup()
+      //}
     }
 
 function lightning_bolt(rootx, depth) {

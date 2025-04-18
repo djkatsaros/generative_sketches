@@ -34,6 +34,13 @@ If you like anything, send a message!
 
 ## Current Collections:
 
+### Forest Thunderstorm:
+Lots of trees, in a bunch, with lightning strikes in the sky illuminating the forest.
+Every other frame count the thunderstorm script alternates between lightning and darkness,
+so load it into a browser!
+
+ <img src = "forest/Storm.png" alt = "trees" title = "xray trees fo reel" height = "400"/>
+
 ### trees:
 Been wanting to apply the line art aesthetic common to these sketches to draw trees. The key 
 ended up being using Catmull-Rom splines, a mathematical interpolation curve where one specifies
