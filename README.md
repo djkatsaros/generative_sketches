@@ -65,6 +65,17 @@ Combination of trees and lightning collection.
 
  <img src = "forest/Storm.png" alt = "trees" title = "xray trees fo reel" height = "400"/>
 
+### Forest Thunderstorm with "strike" effect. 
+Same as forest thunderstorm except now when bolts hit the trees they exhibit a 'burst' effect. 
+The tricky bit with this is detecting when the bolts are close enough to a tree for a burst effect to 
+look natural. There is an auxiliary distance function at the top of the script to help with this. 
+It becomes a tough bookkeeping problem to detect when any of the smaller branching bolts hit a tree,
+which currently is a TODO.
+
+Example that looks pretty good if I do say so:
+
+<img stc = "strikes/strikes.png" alt = "burst!" title= "tree bursts, hope no fire" height = "400"/>
+
 
 ### Ships:
 Early collection, focused on experiments with framerate and geometry shading. The somewhat 3D looking polygons look like some sort of spaceship perhaps - hence the name.

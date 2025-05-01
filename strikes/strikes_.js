@@ -7,7 +7,7 @@ let num_roots = 2;
 // lightning parameters
 var bright = 500;
 var W = 550;
-var num_bolts = 55;
+var num_bolts = 50;
 var fewer_bolts = 33;
 var far_fewer = 27;
 var chance_bolt = 0.25;
