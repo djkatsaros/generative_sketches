@@ -74,7 +74,7 @@ which currently is a TODO.
 
 Example that looks pretty good if I do say so:
 
-<img stc = "strikes/strikes.png" alt = "burst!" title= "tree bursts, hope no fire" height = "400"/>
+<img src = "strikes/strikes.png" alt = "burst!" title= "tree bursts, hope no fire" height = "400"/>
 
 
 ### Ships:
